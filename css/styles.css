@@ -1,0 +1,1002 @@
+/* google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100;1,600&display=swap');
+
+/* CSS variables */
+
+:root {
+    --black-blue: #1C294B;
+    --text-color: #333;
+    --orange: #FB9300;
+    --shdow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1rem);
+}
+
+
+/* global settings */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    /* font-size: 1.1rem; */
+    background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.3;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Buttons */
+
+.btn,
+.send-btn {
+    width: 190px;
+    height: 45px;
+    background-color: var(--orange);
+    color: var(--black-blue);
+    box-shadow: var(--shdow);
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--black-blue);
+    color: var(--orange);
+}
+
+.send-btn:hover {
+    border: 1px solid var(--orange);
+    background-color: var(--black-blue);
+    color: var(--orange);
+}
+
+
+/* pagination */
+
+.pagination div {
+    width: 30px;
+    height: 30px;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.pagination div:hover {
+    background-color: var(--black-blue);
+    color: var(--orange);
+}
+
+
+/* common class to justify and center content for flex items */
+
+.items-center,
+.items-center-space-between,
+.items-center-space-around {
+    display: flex;
+    align-items: center;
+}
+
+.items-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.items-center-space-between {
+    justify-content: space-between;
+}
+
+.items-center-space-around {
+    justify-content: space-around;
+}
+
+
+/* ******************************************** */
+
+
+/* welcome wrapper start */
+
+.welcome-wrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* the first secreen view */
+
+.welcome {
+    display: grid;
+    grid-template-areas: /* row-1 */
+    'top-decore top-decore sameh-main-image'
+    /* row-2 */
+    'nav-bar nav-bar sameh-main-image'
+    /* row-3 */
+    'show-case show-case sameh-main-image'
+    /* row-4 */
+    'tv-show tv-show sameh-main-image';
+    /* setting the height of each row of the grid */
+    grid-template-rows: 23px 100px auto auto;
+}
+
+.top-decore {
+    grid-area: top-decore;
+    height: 1rem;
+    background-color: var(--orange);
+}
+
+
+/* the checf image in the front:his name is Sameh :) */
+
+.sameh-main-image {
+    grid-area: sameh-main-image;
+    height: 100vh;
+    width: 27vw;
+    position: relative;
+}
+
+.sameh-main-image img {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* login and contact icons on the chef image */
+
+.contact-icon {
+    padding: 1rem 0;
+    z-index: 1000;
+    flex-direction: column;
+    width: 35px;
+    height: 180px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.contact-icon i {
+    cursor: pointer;
+}
+
+.contact-icon i:hover {
+    color: var(--orange);
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.login-bar {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.login-bar i {
+    margin-left: 2rem;
+}
+
+.login-bar i,
+.login-bar span {
+    cursor: pointer;
+}
+
+
+/* nav bar start */
+
+.nav-bar {
+    grid-area: nav-bar;
+    margin: 0 5rem 1rem 3rem;
+}
+
+.nav-bar i {
+    color: var(--black-blue);
+    cursor: pointer;
+}
+
+.nav-bar .main-bars-700 {
+    display: none;
+}
+
+.nav-bar-menu-1024-700 {
+    display: none;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-bar-menu ul li {
+    margin: 0 1rem;
+}
+
+.nav-bar-menu ul li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-bar-menu ul li a:hover,
+.nav-bar-menu ul li a:hover i {
+    color: var(--orange);
+}
+
+
+/* Active state of menu bar items */
+
+.nav-bar-menu ul li.active a,
+.nav-bar-menu ul li.active i {
+    color: var(--orange);
+}
+
+.nav-bar-menu ul li a i {
+    margin-right: 0.75rem;
+}
+
+
+/* nav bar end */
+
+.show-case {
+    grid-area: show-case;
+    /* max-height: 200px; */
+    /* width: 65%; */
+    margin: auto;
+}
+
+.show-case-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--black-blue);
+}
+
+.show-case-text h3 {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    color: var(--black-blue);
+}
+
+.show-case-text h3 span {
+    color: var(--orange);
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.show-case-text p {
+    font-size: 1.5rem;
+    /* line-height: 1.3; */
+    margin-right: 1rem;
+}
+
+.show-case-img {
+    margin: 1rem 7rem 6rem 3rem;
+}
+
+.show-case-img img {
+    width: 200px;
+    height: 200px;
+}
+
+.tv-show {
+    grid-area: tv-show;
+    /* max-height: 420px; */
+    background-color: #e6e3e3;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.tv-show .tv-show-sieres .tv-show-item,
+.in-germany .in-germany-sieries .in-germany-sieres-item {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    cursor: pointer;
+}
+
+.tv-show .tv-show-sieres .tv-show-item img,
+.in-germany .in-germany-sieries .in-germany-sieres-item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0.5rem;
+    border: 3px solid #ddd;
+    outline: 1px solid #333;
+}
+
+.tv-show .tv-show-sieres .tv-show-item h5,
+.in-germany .in-germany-sieries .in-germany-sieres-item h5 {
+    font-size: 1.2rem;
+    margin: 0.2rem 0 0.2rem;
+}
+
+.tv-show .tv-show-sieres .tv-show-item h5:first-of-type,
+.in-germany .in-germany-sieries .in-germany-sieres-item h5:first-of-type {
+    font-weight: bold;
+    color: var(--black-blue);
+    font-size: 1.3rem;
+}
+
+.tv-show .tv-show-sieres .tv-show-item i,
+.in-germany .in-germany-sieries .in-germany-sieres-item i {
+    font-size: 1rem;
+    color: var(--orange);
+    margin-right: 1rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.tv-show .tv-show-sieres,
+.in-germany .in-germany-sieries .in-germany-sieres-item {
+    margin-bottom: 1rem;
+}
+
+
+/* Recipes start */
+
+.recipes {
+    flex-direction: column;
+    background-color: var(--black-blue);
+    padding: 2rem 2rem 4rem 2rem;
+}
+
+.recipes .recipes-items {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin: 2rem 5rem 2rem;
+}
+
+.recipe-item {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.recipe-item img {
+    width: 300px;
+    height: 300px;
+    border: 10px solid #fff;
+}
+
+.recipe-item .recipe-item-details {
+    background-color: var(--orange);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border: 10px solid #fff;
+    top: 300px;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.recipe-item:hover .recipe-item-details {
+    top: 100px;
+}
+
+.recipe-item-details h3 {
+    color: var(--black-blue);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.recipe-item-details p {
+    color: var(--black-blue);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-item-details .btn {
+    background-color: var(--black-blue);
+    color: var(--orange);
+    text-align: center;
+    cursor: pointer;
+}
+
+.recipe-item-details .btn:hover {
+    background-color: var(--orange);
+    color: var(--black-blue);
+    border: 1px solid var(--black-blue);
+}
+
+.recipes h1 {
+    color: #fff;
+    font-size: 2.7rem;
+}
+
+
+/* recipes filter Menu */
+
+.recipes .filter-menu {
+    margin-top: 4rem;
+    width: 80%;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.recipes .filter-menu ul {
+    width: 90%;
+    height: auto;
+}
+
+.recipes .filter-menu i {
+    display: none;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.recipes .filter-menu ul li {
+    width: 150px;
+    height: 40px;
+    background-color: var(--orange);
+    color: var(--black-blue);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5rem;
+    cursor: pointer;
+}
+
+.recipes .filter-menu ul li:hover {
+    background-color: var(--black-blue);
+    color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.recipes .filter-menu ul li.active {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    background-color: var(--black-blue);
+}
+
+
+/* Recipes end */
+
+
+/* In Germany start */
+
+.in-germany {
+    flex-direction: column;
+}
+
+
+/* testimonials, in-fermany, contact us headers */
+
+.in-germany h1,
+.testimonials h1,
+.contact-us h1 {
+    padding-top: 3rem;
+    color: var(--black-blue);
+    font-size: 2.7rem;
+}
+
+.in-germany-sieries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin: 5rem 5rem 2rem;
+    gap: 10px;
+}
+
+
+/* In Germany end */
+
+
+/* Testimonials start */
+
+.testimonials {
+    flex-direction: column;
+    background-color: #ddd;
+    margin: 5rem 0 0;
+    padding-bottom: 5rem;
+}
+
+.testimonials-box {
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.testimonials-words {
+    background-color: var(--orange);
+    font-size: 1.7rem;
+    color: var(--black-blue);
+    padding: 3rem 5rem 8rem;
+    margin-top: 5rem;
+    width: 60%;
+    height: auto;
+    line-height: 2.5;
+}
+
+.person-data {
+    background-color: var(--black-blue);
+    width: 60%;
+    color: var(--orange);
+    height: 110px;
+    border-radius: 0 0 50px 50px;
+    padding: 0 5rem;
+    font-size: 1.7rem;
+    position: relative;
+}
+
+.person-data .avatar {
+    position: absolute;
+    top: -50%;
+    left: 47%;
+    border: 2px solid var(--orange);
+    border-radius: 50% 50% 50% 50%;
+    /* TODO: height and width of the avatar will be adjusted when aquiring the avatar from the database: the static avatar is already rounded */
+    height: 1px;
+    width: 1px;
+    /* ******************************************************* */
+    background-color: var(--orange);
+}
+
+.person-data .avatar img {
+    width: 100px;
+    height: 100px;
+}
+
+.person-name-date {
+    font-size: 1.3rem;
+}
+
+.person-name-date i {
+    margin-right: 1rem;
+}
+
+.person-name-date span {
+    color: #fff
+}
+
+.person-name-date div:first-child span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.person-name-date div {
+    margin: 1rem;
+}
+
+
+/* Testimonials end */
+
+
+/* contact-us start */
+
+.contact-us {
+    height: auto;
+    flex-direction: column;
+    background-color: var(--black-blue);
+    padding-bottom: 5rem;
+}
+
+.contact-us h1 {
+    color: #fff;
+}
+
+.contact-form-data {
+    margin-top: 5rem;
+    width: 90%;
+}
+
+.contact-form-data .contact-form {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.form-row {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.form-row:last-of-type {
+    justify-content: center;
+}
+
+.form-row label {
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: right;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    background-color: var(--black-blue);
+    border: 1px solid var(--orange);
+    padding: 1rem;
+    margin-left: 1.5rem;
+}
+
+.form-row textarea {
+    height: 130px;
+}
+
+.contact-data {
+    width: 35%;
+    height: auto;
+    background-color: var(--orange);
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 5rem 2rem 20rem;
+}
+
+.contact-data h1 {
+    text-align: center;
+}
+
+.contact-data p {
+    font-size: 1.9rem;
+    color: var(--black-blue);
+    padding: 1rem 5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-data .form-row i,
+.contact-data .form-row span {
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.contact-data .form-row span {
+    font-size: 1.7rem;
+}
+
+.contact-data img {
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 102%;
+}
+
+.contact-data-list .form-row {
+    margin: 2rem 0;
+}
+
+
+/* contact-us end */
+
+
+/* Footer start */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    height: 70px;
+    font-size: 1.5rem;
+    padding: 3rem;
+}
+
+
+/* Footer end */
+
+
+/* Media Queries */
+
+@media(max-width:1024px) {
+    .welcome {
+        display: grid;
+        grid-template-areas: /* row-1 */
+        'top-decore top-decore sameh-main-image'
+        /* row-2 */
+        'nav-bar nav-bar sameh-main-image'
+        /* row-3 */
+        'show-case show-case sameh-main-image'
+        /* row-4 */
+        'tv-show tv-show tv-show';
+        /* setting the height of each row of the grid */
+        grid-template-rows: 23px 150px auto auto;
+    }
+    /* navbar menu start */
+    /* hide full nav bar and show the nav bar icons */
+    .nav-bar-menu {
+        display: none;
+    }
+    .nav-bar-menu-1024-700 {
+        display: inline-block;
+        width: 80%;
+        padding: 0 5rem;
+    }
+    .nav-bar-menu-1024-700 ul li {
+        margin: 0 3rem;
+    }
+    .nav-bar-menu-1024-700 ul li a {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .nav-bar-menu-1024-700 ul li a:hover {
+        color: var(--orange);
+    }
+    .nav-bar-menu-1024-700 ul li a i {
+        margin-right: 0.75rem;
+    }
+    /* navbar menu end */
+    .show-case-text {
+        padding-left: 4rem;
+    }
+    .show-case-text h1 {
+        font-size: 2.5rem;
+    }
+    .show-case-text h3 {
+        font-size: 2rem;
+    }
+    .btn {
+        font-size: 1.4rem;
+    }
+    html {
+        font-size: 55%;
+    }
+}
+
+@media(max-width:900px) {
+    .welcome {
+        display: grid;
+        grid-template-areas: /* row-1 */
+        'top-decore  top-decore'
+        /* row-2 */
+        'nav-bar  nav-bar'
+        /* row-3 */
+        'show-case show-case'
+        /* row-4 */
+        'tv-show tv-show';
+        /* setting the height of each row of the grid */
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 23px 80px auto auto;
+    }
+    .sameh-main-image {
+        display: none;
+    }
+    .show-case {
+        width: 90%;
+    }
+    html {
+        font-size: 55%;
+    }
+    /* testimonials start */
+    .person-data .avatar img {
+        width: 70px;
+        height: 70px;
+    }
+    /* testimonials end */
+    /* contact-us start */
+    .contact-form-data {
+        flex-wrap: wrap;
+    }
+    .contact-form-data .contact-form {
+        width: 90%;
+    }
+    .contact-data {
+        width: 100%;
+    }
+    .contact-data p {
+        padding: 1rem 2rem;
+    }
+    .contact-data .form-row i {
+        margin-bottom: 1rem;
+    }
+    .contact-data img {
+        height: 150px;
+    }
+}
+
+@media(max-width:700px) {
+    .welcome {
+        display: grid;
+        grid-template-areas: /* row-1 */
+        'top-decore '
+        /* row-2 */
+        'nav-bar '
+        /* row-3 */
+        'show-case'
+        /* row-4 */
+        'tv-show';
+        /* setting the height of each row of the grid */
+        grid-template-columns: 90vw;
+        grid-template-rows: 23px 80px auto auto;
+    }
+    /* .nav-bar-menu {
+        display: none;
+    } */
+    .welcome {
+        grid-template-areas: 'top-decore', 'nav-var', 'show-case', 'tv-show';
+    }
+    /* display bar icons and hide the nav bae menu */
+    .nav-bar .main-bars-700 {
+        display: inline-block;
+    }
+    .nav-bar-menu-1024-700 {
+        display: none;
+    }
+    /* TODO:Adjust the menu bar with this responsive size */
+    .show-case {
+        flex-wrap: wrap-reverse;
+    }
+    .show-case-text {
+        padding-bottom: 0;
+    }
+    .tv-show .tv-show-sieres {
+        flex-wrap: wrap;
+    }
+    .tv-show .tv-show-sieres .tv-show-item {
+        margin-bottom: 2rem;
+    }
+    html {
+        font-size: 50%;
+    }
+    /* recipes */
+    /* hide the filter menu */
+    .recipes .filter-menu {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .filter-menu ul {
+        display: none;
+    }
+    /* show filter bars */
+    .recipes .filter-menu i {
+        display: inline-block;
+    }
+    .recipes .recipes-items {
+        padding: 0;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+    }
+    .recipes .recipes-items .recipe-item {
+        height: 200px;
+        width: 200px;
+        padding: 0;
+    }
+    /* .recipes .recipes-items .recipe-item .recipe-item-details {
+        top: 50px
+    } */
+    .recipes .recipes-items .recipe-item img {
+        height: 200px;
+        width: 200px;
+    }
+    .recipe-item:hover .recipe-item-details {
+        width: 200px;
+        top: 0;
+    }
+    /* Testimonials */
+    .testimonials {
+        margin-bottom: 0;
+    }
+    .testimonials-words {
+        margin-top: 0;
+        height: auto;
+        order: 2;
+        width: 90%;
+    }
+    .person-data {
+        height: auto;
+        border-radius: 50px 50px 0 0;
+        padding: 7rem 2rem 2rem;
+        font-size: 1.3rem;
+        margin-top: 10rem;
+        flex-direction: column;
+        width: 90%;
+    }
+    .person-data .avatar img {
+        width: 70px;
+        height: 70px;
+    }
+    .person-data .avatar {
+        top: -25%;
+        left: 45%;
+        border: 2px solid var(--orange);
+        border-radius: 50% 50% 50% 50%;
+        height: 80px;
+        width: 80px;
+        /* background-color: var(--orange); */
+    }
+    /* contact us */
+    /* .contact-form-data {
+        flex-wrap: wrap;
+    }
+    .contact-form-data .contact-form {
+        width: 90%;
+    }
+    .contact-data {
+        width: 100%;
+    }
+    .contact-data p {
+        padding: 1rem 2rem;
+    }
+    .contact-data .form-row i {
+        margin-bottom: 1rem;
+    }
+    .contact-data img {
+        height: 150px;
+    } */
+}
+
+@media(max-width:500px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .form-row label {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    footer {
+        height: auto;
+        padding: 5rem 2rem;
+    }
+}
+
+
+/* welcome wrapper end */
+
+
+/* hints */
+
+
+/* 
+in grid we can assign
+grid-template-columns:repeat(auto-fit,minmax(200,1fr)
+---- here we need not the media query
+
+
+*/
