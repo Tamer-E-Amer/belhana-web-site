@@ -257,6 +257,10 @@ ul {
     color: var(--orange);
 }
 
+.nav-bar-menu ul li i {
+    color: var(--black-blue);
+}
+
 
 /* Active state of menu bar items */
 
