@@ -76,6 +76,23 @@ ul {
 }
 
 
+/* scroll to top button */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: -122px;
+    right: 30px;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.5s;
+    /* display: none; */
+}
+
+.scroll-to-top.show {
+    bottom: -22px;
+}
+
+
 /* pagination */
 
 .pagination div {
