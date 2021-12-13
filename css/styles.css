@@ -268,6 +268,7 @@ ul {
 .nav-bar-menu ul li a {
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--black-blue);
 }
 
 .nav-bar-menu ul li a:hover,

@@ -10,7 +10,6 @@ let scrollToTop = document.querySelector(".scroll-to-top");
  * @param //anonymous function has no parameters
  */
 window.onscroll = () => {
-    console.log(this.scrollY);
     this.scrollY >= screen.height ? scrollToTop.classList.add("show") : scrollToTop.classList.remove("show");
 }
 
@@ -83,4 +82,17 @@ function createNavBarMenu() {
     }
 
 }
+
+// active class for the section
+window.addEventListener("scroll", () => {
+    let allSections = document.querySelectorAll("section");
+    allSections.forEach((section) => {
+        let top = section.getBoundingClientRect().top;
+        if (top >= -400 && top <= 250) {
+            section.classList.add("active");
+        } else {
+            section.classList.remove("active");
+        }
+    });
+});
 createNavBarMenu();
