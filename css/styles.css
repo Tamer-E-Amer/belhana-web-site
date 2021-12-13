@@ -21,6 +21,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    scroll-behavior: smooth;
     transition: all .5s ease-in-out;
 }
 

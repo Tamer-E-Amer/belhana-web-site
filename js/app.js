@@ -20,7 +20,62 @@ window.onscroll = () => {
  */
 scrollToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth", }));
 /***************************************************************************************** */
+/**
+ *  @description this function creates the nav bar menu links           dynamilcally from all sections in the Page
+ * @param //anonymous function has no parameters
+ * nav-bar-menu u : the name of the navbar holder in CSS file
+ * 
+ */
 
-function createNavMenu() {
+function createNavBarMenu() {
+    //get the nav-bar-menu holder
+    let navBarMenu = document.querySelector('.nav-bar-menu ul');
+    //loop through all section in the document and then make an li element for ech section
+
+    // get all element of tag 'section'
+    let allSections = document.querySelectorAll('section');
+    //looping throught allSections collection
+    allSections.forEach((section) => {
+        //get the id, name and link icon of the section by using getAttribute method for id, data-nav, data-icon properties
+        var link = section.getAttribute('id');
+        let sectionName = section.getAttribute("data-nav");
+        let linkIcon = section.getAttribute("data-icon")
+        let li = document.createElement("li");
+
+        /**
+         * as long as there are sections that i do not want to make a link for it in the main menu => some sections do not have id and data-nav properties
+         * the condition to exclude these section from being added in the nav-bar-menu
+         */
+        if (sectionName !== null) {
+            if (sectionName != "In Germany") {
+                li.innerHTML = `<a data-link="${link}" class="scroll" href="#"><i class="${linkIcon}"></i>${sectionName}</a>`;
+            } else {
+                // In Germany Section has not font awesome icon but an image so i must check about it
+                li.innerHTML = `<a data-link="${link}" class="scroll" href="#"><img src="img/germany.png">${sectionName}</a>`
+            }
+            navBarMenu.appendChild(li);
+            //get all links
+
+        }
+
+        //console.log(sectionName);
+    });
+    /**
+     * This part for navigating through the menu bar links
+     */
+    //get all menu-barmenu items as links
+    let links = document.querySelectorAll('.scroll');
+    //loop through links and show the section which has an id equal to the data-link property for that link
+    links.forEach(function(link) {
+        // this code will set event listner on link for click and liten to event object
+        link.addEventListener("click", (event) => {
+            //preventing default action for the `a` tag to can scroll to the wanted section using JS not HTML anchor
+            event.preventDefault();
+            document.getElementById(link.getAttribute("data-link")).scrollIntoView();
+        });
+    })
 
 }
+
+
+createNavBarMenu();

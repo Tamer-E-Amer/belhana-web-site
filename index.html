@@ -14,7 +14,7 @@
 
 <body id="home">
     <!-- Welcome wrapper start -->
-    <section class="welcome-wrapper">
+    <section class="welcome-wrapper" id="home" data-nav="Home" data-icon="fas fa-home">
         <!-- Welcome  start -->
         <div class="welcome">
             <!-- top orange line -->
@@ -27,18 +27,12 @@
                 <!-- Nav bar for large screens -->
                 <div class="nav-bar-menu">
                     <ul class="items-center-space-between">
-                        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                        <li><a href="#"><i class="fas fa-drumstick-bite"></i>Recipes</a></li>
-                        <li>
-                            <a href="#" class="items-center"><img src="img/germany.png"> Germany</a>
-                        </li>
-                        <li><a href="#"><i class="fas fa-comment-dots"></i>Testimonials</a></li>
-                        <!-- TODO:Add section for "About" link later -->
-                        <li><a href="#"><i class="fas fa-info-circle"></i>About</a></li>
-                        <!-- ----------------------------------------- -->
-                        <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+                        <!-- Nav bar menu li items will generated dynamically using JS -->
+
                     </ul>
                 </div>
+                <!-- Nav bars for medium and small screen are static
+                TODO:make it dynamic with JS -->
                 <!-- Navbar Menu for screens from 1024px to begin of 700 px -->
                 <div class="nav-bar-menu-1024-700">
                     <ul class="items-center-space-between">
@@ -103,8 +97,9 @@
             </section>
             <section class="sameh-main-image">
                 <img src="img/sameh1.png" alt="sameh-main-image" srcset="">
-                <div class="login-bar">
-                    <span>Login</span>
+                <div>
+                    <!-- TODO:for test create links and then remove the creating method -->
+                    <span class="login-btn1">Login</span>
                     <i class="fas fa-globe"></i>
                 </div>
                 <div class="contact-icon items-center items-center-space-around">
@@ -124,7 +119,7 @@
     </section>
 
     <!-- Recipes Section start -->
-    <div class="recipes items-center items-center-space-between">
+    <section class="recipes items-center items-center-space-between" id="recipes" data-nav="Recipes" data-icon="fas fa-drumstick-bite">
         <h1>Recipes</h1>
         <div class="filter-menu items-center-space-between items-center">
             <ul class="items-center items-center-space-around">
@@ -207,11 +202,11 @@
             <div>2</div>
             <div>3</div>
         </div>
-    </div>
+    </section>
     <!-- Recipes Section end -->
 
     <!-- In Germany Section start -->
-    <section class="in-germany items-center items-center-space-around">
+    <section class="in-germany items-center items-center-space-around" id="in-germany" data-nav="In Germany" data-icon="fas fa-flag">
         <h1>In Germany</h1>
         <div class="in-germany-sieries">
             <div class="in-germany-sieres-item">
@@ -249,7 +244,7 @@
     </section>
     <!-- In Germany Section end -->
     <!-- Testimonials start -->
-    <section class="testimonials items-center items-center-space-around">
+    <section class="testimonials items-center items-center-space-around" id="testimonials" data-nav="Testimonials" data-icon="fas fa-comment-dots">
         <h1>Testimonals</h1>
         <div class="testimonials-box items-center items-center-space-around">
             <div class="testimonials-words">
@@ -281,7 +276,7 @@
     </section>
     <!-- Testimonials end -->
     <!-- Contact us section start -->
-    <section class="contact-us items-center-space-around items-center">
+    <section class="contact-us items-center-space-around items-center" id="contact-us" data-nav="Contact Us" data-icon="fas fa-phone">
         <h1>Contact Us</h1>
 
         <div class="contact-form-data items-center-space-around">
