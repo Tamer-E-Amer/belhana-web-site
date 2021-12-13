@@ -54,11 +54,7 @@ function createNavBarMenu() {
                 li.innerHTML = `<a data-link="${link}" class="scroll" href="#"><img src="img/germany.png">${sectionName}</a>`
             }
             navBarMenu.appendChild(li);
-            //get all links
-
         }
-
-        //console.log(sectionName);
     });
     /**
      * This part for navigating through the menu bar links
@@ -66,14 +62,20 @@ function createNavBarMenu() {
     //get all menu-barmenu items as links
     let links = document.querySelectorAll('.scroll');
     //loop through links and show the section which has an id equal to the data-link property for that link
-    links.forEach(function(link) {
+    links.forEach((linkItem) => {
         // this code will set event listner on link for click and liten to event object
-        link.addEventListener("click", (event) => {
-            //preventing default action for the `a` tag to can scroll to the wanted section using JS not HTML anchor
+        linkItem.addEventListener("click", (event) => {
             event.preventDefault();
-            document.getElementById(link.getAttribute("data-link")).scrollIntoView();
+            // Reafactoring the number of functions in the foreach loop
+            scrollToSection(linkItem);
         });
     })
+
+
+    function scrollToSection(linkItem) {
+        console.log('menu-click');
+        document.getElementById(linkItem.getAttribute("data-link")).scrollIntoView();
+    }
 
 }
 
