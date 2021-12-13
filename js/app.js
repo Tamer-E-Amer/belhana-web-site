@@ -63,21 +63,24 @@ function createNavBarMenu() {
     let links = document.querySelectorAll('.scroll');
     //loop through links and show the section which has an id equal to the data-link property for that link
     links.forEach((linkItem) => {
-        // this code will set event listner on link for click and liten to event object
-        linkItem.addEventListener("click", (event) => {
-            event.preventDefault();
-            // Reafactoring the number of functions in the foreach loop
-            scrollToSection(linkItem);
-        });
+        // calling `scrollToSection function`
+        scrollToSection(linkItem);
     })
 
-
+    /**
+     * @description this function accept each link item and pass it to th `scrollToSection` function.
+     *  - this function will set event listner in each link and for click and listen to event object
+     *  - the handler of the event will scroll to the wanted section
+     * @param {string} linkItem - a link in the nav-bar-menu
+     */
     function scrollToSection(linkItem) {
-        console.log('menu-click');
-        document.getElementById(linkItem.getAttribute("data-link")).scrollIntoView();
+        linkItem.addEventListener("click", (event) => {
+            //prevent the default action of anchor tag to scroll using JS
+            event.preventDefault();
+            // showing the desired section after clicking the item
+            document.getElementById(linkItem.getAttribute("data-link")).scrollIntoView();
+        })
     }
 
 }
-
-
 createNavBarMenu();
