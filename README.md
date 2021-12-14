@@ -1,10 +1,9 @@
 # Belhana landing page
 This is a landing page called Belhana. 
 ## About the Project
-**Belhana** is aimed to be the web site for a Facebook page called  **Belhana Welshiftishy** [belhanawelshiftishy](https://www.facebook.com/belhanawelshefteshy)
+**Belhana** is the first project that is requested by **Udacity** - **Frontend Web professional track** which is **a Landing Page**.
 
-i submit it as an application for the first Project of **Udacity** - **Frontend Web professional track**
-
+I aimed to be the web site for a Facebook page called  **Belhana Welshiftishy** [belhanawelshiftishy](https://www.facebook.com/belhanawelshefteshy)
 ## Project Criteria
 The first project in the Scoolarship determine certain criteria to be applied in this project
 - The Landing page should has at least four sections
