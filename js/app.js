@@ -83,16 +83,22 @@ function createNavBarMenu() {
 
 }
 
-// active class for the section
+/**
+ * Active sections:
+ * this part of code check if the section in the viewport or not and so determine to add the active class to the section being scrolled
+ */
 window.addEventListener("scroll", () => {
     let allSections = document.querySelectorAll("section");
     allSections.forEach((section) => {
+        //get the top from teh returned objetc of the rectangle data that surround the section
         let top = section.getBoundingClientRect().top;
-        if (top >= -400 && top <= 250) {
+        // 400 because some section is very taller than the view port so when scrolling up it should be checked if it reaches to bog nigative value?
+        if (top >= -400 && top < 250) {
             section.classList.add("active");
         } else {
-            section.classList.remove("active");
+            section.classList.remove("active")
         }
+
     });
 });
 createNavBarMenu();

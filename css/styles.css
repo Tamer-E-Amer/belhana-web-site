@@ -139,6 +139,16 @@ ul {
 }
 
 
+/* section active status start */
+
+section.active {
+    border-left: 5px solid red;
+}
+
+
+/* section active status end */
+
+
 /* ******************************************** */
 
 
@@ -240,7 +250,10 @@ ul {
 
 .nav-bar {
     grid-area: nav-bar;
-    margin: 0 5rem 1rem 3rem;
+    margin: 1rem 5rem 1rem 3rem;
+    /* position: fixed; */
+    background-color: #fff;
+    z-index: 2000;
 }
 
 .nav-bar i {
