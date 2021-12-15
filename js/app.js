@@ -28,18 +28,20 @@ scrollToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: 
 
 function createNavBarMenu() {
     //get the nav-bar-menu holder
-    let navBarMenu = document.querySelector('.nav-bar-menu ul');
+    const navBarMenu = document.querySelector('.nav-bar-menu ul');
     //loop through all section in the document and then make an li element for ech section
 
     // get all element of tag 'section'
-    let allSections = document.querySelectorAll('section');
+    const allSections = document.querySelectorAll('section');
+    // create a document fragment to make adding elements to the DOM more effecient to also reducing the reflow and repaint precesses
+    const navbarFragment = document.createDocumentFragment();
     //looping throught allSections collection
     allSections.forEach((section) => {
         //get the id, name and link icon of the section by using getAttribute method for id, data-nav, data-icon properties
         var link = section.getAttribute('id');
-        let sectionName = section.getAttribute("data-nav");
-        let linkIcon = section.getAttribute("data-icon")
-        let li = document.createElement("li");
+        const sectionName = section.getAttribute("data-nav");
+        const linkIcon = section.getAttribute("data-icon")
+        const li = document.createElement("li");
 
         /**
          * as long as there are sections that i do not want to make a link for it in the main menu => some sections do not have id and data-nav properties
@@ -52,9 +54,12 @@ function createNavBarMenu() {
                 // In Germany Section has not font awesome icon but an image so i must check about it
                 li.innerHTML = `<a data-link="${link}" class="scroll" href="#"><img src="img/germany.png">${sectionName}</a>`
             }
-            navBarMenu.appendChild(li);
+            //navBarMenu.appendChild(li); // append li to fragment instead to DOM directly
+            navbarFragment.appendChild(li);
         }
     });
+    //apend the fragment to the DOM
+    navBarMenu.appendChild(navbarFragment); // reflow and repaint once
     /**
      * This part for navigating through the menu bar links
      */
