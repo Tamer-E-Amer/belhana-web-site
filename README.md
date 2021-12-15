@@ -19,10 +19,7 @@ The first project in the Scoolarship determine certain criteria to be applied in
 - CSS
 - JS
 
-**the sketch of this project is made by Adobe XD**
-[Belhana](https://www.behance.net/gallery/129896689/Belhana-Wel-shiftishy-website-Project)
+**the sketch of this project is made by Adobe XD** and it is publised on **Behance**:
+[Behance](https://www.behance.net/gallery/129896689/Belhana-Wel-shiftishy-website-Project)
 ## Online Link
-The projejct is published online on [Behance](https://belhana.pages.dev/)
-## Hints
-- You can easly access the CSS properties according to the page name just search about the page name for example index - about , ....
-- The project is designd to be fully responsive
+The projejct is published online on [Belhana](https://belhana.pages.dev/)
