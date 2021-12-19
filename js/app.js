@@ -6,7 +6,7 @@
 let scrollToTop = document.querySelector(".scroll-to-top");
 
 /**
- * @description when scroll -> test if the the position of Screen Y greater than the scrren                     height then show the button else hide it
+ * @description when scroll -> test if the the position of Screen Y greater than the scrren height then show the button else hide it
  * @param //anonymous function has no parameters
  */
 window.onscroll = () => {
@@ -88,7 +88,18 @@ function createNavBarMenu() {
 
 }
 
+/** 
+ * responsive menu bar in wide and small screen
+ *  */
+const burgerMenu = document.querySelector('.main-bars-700');
+burgerMenu.addEventListener('click', (e) => {
+    //show the nav-bar-menu
+    const navBarMenu = document.querySelector('.nav-bar-menu');
+    navBarMenu.classList.toggle('active');
+});
+
 /**
+ * 
  * Active sections:
  * this part of code check if the section in the viewport or not and so determine to add the active class to the section being scrolled
  */

@@ -310,8 +310,6 @@ section.active {
 
 .show-case {
     grid-area: show-case;
-    /* max-height: 200px; */
-    /* width: 65%; */
     margin: auto;
 }
 
@@ -350,7 +348,6 @@ section.active {
 
 .tv-show {
     grid-area: tv-show;
-    /* max-height: 420px; */
     background-color: #e6e3e3;
     flex-direction: column;
     padding: 2rem;
@@ -362,7 +359,6 @@ section.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: flex-start; */
     cursor: pointer;
 }
 
@@ -891,9 +887,6 @@ footer {
         grid-template-columns: 90vw;
         grid-template-rows: 23px 80px auto auto;
     }
-    /* .nav-bar-menu {
-        display: none;
-    } */
     .welcome {
         grid-template-areas: 'top-decore', 'nav-var', 'show-case', 'tv-show';
     }
@@ -901,10 +894,41 @@ footer {
     .nav-bar .main-bars-700 {
         display: inline-block;
     }
+    /* responsive menu bar in the medium and small screen start */
+    .nav-bar-menu {
+        display: none;
+        width: 65%;
+        background-color: #fff;
+        position: absolute;
+        top: 12%;
+        right: 20%;
+    }
+    .nav-bar-menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0;
+    }
+    .nav-bar-menu ul li {
+        width: 100%;
+        margin: 0.3rem 0;
+        padding: 1rem;
+        background-color: var(--black-blue);
+        text-align: center;
+        height: 5rem;
+    }
+    .nav-bar-menu ul li a,
+    .nav-bar-menu ul li a i {
+        color: var(--orange);
+        /* padding: 1rem; */
+    }
+    .nav-bar-menu.active {
+        display: inline-block;
+    }
+    /* responsive menu bar in the medium and small screen end */
     .nav-bar-menu-1024-700 {
         display: none;
     }
-    /* TODO:Adjust the menu bar with this responsive size */
     .show-case {
         flex-wrap: wrap-reverse;
     }
@@ -985,25 +1009,6 @@ footer {
         width: 80px;
         /* background-color: var(--orange); */
     }
-    /* contact us */
-    /* .contact-form-data {
-        flex-wrap: wrap;
-    }
-    .contact-form-data .contact-form {
-        width: 90%;
-    }
-    .contact-data {
-        width: 100%;
-    }
-    .contact-data p {
-        padding: 1rem 2rem;
-    }
-    .contact-data .form-row i {
-        margin-bottom: 1rem;
-    }
-    .contact-data img {
-        height: 150px;
-    } */
 }
 
 @media(max-width:500px) {
@@ -1024,15 +1029,3 @@ footer {
 
 
 /* welcome wrapper end */
-
-
-/* hints */
-
-
-/* 
-in grid we can assign
-grid-template-columns:repeat(auto-fit,minmax(200,1fr)
----- here we need not the media query
-
-
-*/
